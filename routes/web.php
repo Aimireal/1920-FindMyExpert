@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','ExpertController@index')->name('home');
+Route::get('create','ExpertController@create')->name('create');
+Route::post('create','ExpertController@store')->name('store');
