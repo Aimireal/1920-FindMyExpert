@@ -30,6 +30,14 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="companyType" class="col-md-2 control-label">Business Type</label>
+
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" value="{{$expert->company_type}}"name="companyType" placeholder="Company Type">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label for="firstName" class="col-md-2 control-label">First Name</label>
 
                             <div class="col-md-10">

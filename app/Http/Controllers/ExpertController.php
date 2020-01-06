@@ -26,6 +26,7 @@ class ExpertController extends Controller
         $this->validate($request,
             [
                 'companyName' => 'required',
+                'companyType' => 'required',
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
@@ -34,6 +35,7 @@ class ExpertController extends Controller
 
         $expert = new Expert;
         $expert->company_name = $request->companyName;
+        $expert->company_type = $request->companyType;
         $expert->first_name = $request->firstName;
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;
@@ -55,6 +57,7 @@ class ExpertController extends Controller
         $this->validate($request,
             [
                 'companyName' => 'required',
+                'companyType' => 'required',
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
@@ -63,6 +66,7 @@ class ExpertController extends Controller
 
         $expert = Expert::find($id);
         $expert->company_name = $request->companyName;
+        $expert->company_type = $request->companyType;
         $expert->first_name = $request->firstName;
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;

@@ -30,6 +30,14 @@
                        </div>
 
                        <div class="form-group">
+                           <label for="companyType" class="col-md-2 control-label">Business Type</label>
+
+                           <div class="col-md-10">
+                               <input type="text" class="form-control" name="companyType" placeholder="Company Type">
+                           </div>
+                       </div>
+
+                       <div class="form-group">
                            <label for="firstName" class="col-md-2 control-label">First Name</label>
 
                            <div class="col-md-10">
@@ -63,11 +71,10 @@
 
                        <div class="form-group">
                            <div class="col-md-10 col-md-offset-2">
-                               <button type="button" class="btn btn-default">Cancel</button>
+                               <a href="{{route('home')}}" type="button" class="btn btn-default">Cancel</a>
                                <button type="submit" class="btn btn-primary">Submit</button>
                            </div>
                        </div>
-
                    </fieldset>
                </form>
            </div>

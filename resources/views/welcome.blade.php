@@ -13,6 +13,7 @@
                     <tr>
                         <th class="text-center">ID</th>
                         <th class="text-center">Business Name</th>
+                        <th class="text-center">Business Type</th>
                         <th class="text-center">First Name</th>
                         <th class="text-center">Last Name</th>
                         <th class="text-center">Email</th>
@@ -25,6 +26,7 @@
                     <tr>
                         <td>{{$expert->id}}</td>
                         <td>{{$expert->company_name}}</td>
+                        <td>{{$expert->company_type}}</td>
                         <td>{{$expert->first_name}}</td>
                         <td>{{$expert->last_name}}</td>
                         <td>{{$expert->email}}</td>
