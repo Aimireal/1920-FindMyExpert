@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0)">FindMyExpert</a>
+            <a class="navbar-brand" href="javascript:void(0)"> <i class="fa fa-address-book" aria-hidden="true"></i> FindMyExpert </a>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">

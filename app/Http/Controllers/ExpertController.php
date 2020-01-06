@@ -9,7 +9,8 @@ class ExpertController extends Controller
 {
     public function index()
     {
-        $experts = Expert::all();
+        //Display the experts
+        $experts = Expert::paginate(10);
         return view('welcome', compact('experts'));
     }
 
@@ -68,6 +69,13 @@ class ExpertController extends Controller
         $expert->phone = $request->phone;
         $expert->save();
         return redirect(route('home'))->with('successMsg', 'Expert Updated');
+    }
+
+    public function delete($id)
+    {
+        //Delete an entry from the DB
+        Expert::find($id)->delete();
+        return redirect(route('home'))->with('successMsg', 'Expert Removed');
     }
 
     public function viewDetailed()
