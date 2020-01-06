@@ -82,10 +82,16 @@ class ExpertController extends Controller
         return redirect(route('home'))->with('successMsg', 'Expert Removed');
     }
 
-    public function viewDetailed()
+    public function details()
     {
         //View more of selected user ToDo: Add reviews and ratings. Setup like the above
 
+    }
+
+    public function view()
+    {
+        //Create view to add new user
+        return view('view');
     }
 
 }
