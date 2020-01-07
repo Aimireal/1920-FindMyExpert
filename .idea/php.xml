@@ -92,6 +92,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/appstract/laravel-blade-directives" />
       <path value="$PROJECT_DIR$/vendor/appstract/laravel-bootstrap-components" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

@@ -25,8 +25,8 @@ class ExpertController extends Controller
         //Store the values into the DB for add button
         $this->validate($request,
             [
-                'companyName' => 'required',
                 'companyType' => 'required',
+                'companyName' => 'required',
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
@@ -34,8 +34,8 @@ class ExpertController extends Controller
             ]);
 
         $expert = new Expert;
-        $expert->company_name = $request->companyName;
         $expert->company_type = $request->companyType;
+        $expert->company_name = $request->companyName;
         $expert->first_name = $request->firstName;
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;
@@ -56,8 +56,8 @@ class ExpertController extends Controller
         //Update the entry we have changed under edit, almost same as store
         $this->validate($request,
             [
-                'companyName' => 'required',
                 'companyType' => 'required',
+                'companyName' => 'required',
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
@@ -65,8 +65,8 @@ class ExpertController extends Controller
             ]);
 
         $expert = Expert::find($id);
-        $expert->company_name = $request->companyName;
         $expert->company_type = $request->companyType;
+        $expert->company_name = $request->companyName;
         $expert->first_name = $request->firstName;
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;
@@ -80,6 +80,11 @@ class ExpertController extends Controller
         //Delete an entry from the DB
         Expert::find($id)->delete();
         return redirect(route('home'))->with('successMsg', 'Expert Removed');
+    }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
     public function details()

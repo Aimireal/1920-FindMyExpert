@@ -24,3 +24,6 @@ Route::post('update/{id}', 'ExpertController@update')->name('update');
 Route::delete('delete/{id}', 'ExpertController@delete')->name('delete');
 
 Route::get('view', 'ExpertController@view')->name('view');
+
+Auth::routes(['verify' => true]);
+Route::get('/home', 'ExpertController@index')->name('home');

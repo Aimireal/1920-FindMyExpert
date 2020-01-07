@@ -14,7 +14,7 @@
 
        <div class="panel panel-default">
            <div class="panel-heading">
-               <h3 class="panel-title">Add new Expert</h3>
+               <h3 class="panel-title">Add new Expert <small class="text-muted"> Please fill out as much as you can</small></h3>
            </div>
            <div class="panel-body">
                <form class="form-horizontal" action="{{route('store')}}" method="POST">
@@ -22,18 +22,18 @@
                    <fieldset>
 
                        <div class="form-group">
-                           <label for="companyName" class="col-md-2 control-label">Business Name</label>
+                           <label for="companyType" class="col-md-2 control-label">Business Type</label>
 
                            <div class="col-md-10">
-                               <input type="text" class="form-control" name="companyName" placeholder="Company Name">
+                               <input type="text" class="form-control" name="companyType" placeholder="...">
                            </div>
                        </div>
 
                        <div class="form-group">
-                           <label for="companyType" class="col-md-2 control-label">Business Type</label>
+                           <label for="companyName" class="col-md-2 control-label">Business Name</label>
 
                            <div class="col-md-10">
-                               <input type="text" class="form-control" name="companyType" placeholder="Company Type">
+                               <input type="text" class="form-control" name="companyName" placeholder="Company Name">
                            </div>
                        </div>
 
