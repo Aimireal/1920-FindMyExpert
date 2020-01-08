@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Expert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ExpertController extends Controller
 {
@@ -96,7 +97,10 @@ class ExpertController extends Controller
     public function columnSearching()
     {
         //Browse view
-        return view('column_searching');
+        $category = DB::table('category')
+            ->select("*")
+            ->get();
+        return view('column_searching', compact('category'));
     }
 
 }
