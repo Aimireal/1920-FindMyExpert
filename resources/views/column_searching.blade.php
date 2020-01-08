@@ -1,14 +1,3 @@
-<head>
-    <title>Testing</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
-<body>
-
 <div class="container">
     <br />
     <div class="table-responsive">
@@ -20,7 +9,7 @@
                     <select name="category_filter" id="category_filter" class="form-control">
                         <option value="">Select Business Type</option>
                         @foreach($category as $row)
-                            <option value="{{$row->id}}">{{$row->category_name}}</option>
+                            <option value="{{$row->category_id}}">{{$row->category_name}}</option>
                         @endforeach
                     </select>
                 </th>
@@ -50,22 +39,22 @@
                 },
                 columns:[
                     {
-                        data: 'company_name', name: 'company_name',
+                        data: 'company_name', name: 'company_name'
                     },
                     {
-                        data: 'category_name', name: 'category_name',
+                        data: 'category_name', name: 'category_name', orderable:false
                     },
                     {
-                        data: 'first_name', name: 'first_name',
+                        data: 'first_name', name: 'first_name'
                     },
                     {
-                        data: 'last_name', name: 'last_name',
+                        data: 'last_name', name: 'last_name'
                     },
                     {
-                        data: 'email', name: 'email',
+                        data: 'email', name: 'email'
                     },
                     {
-                        data: 'phone', name: 'phone',
+                        data: 'phone', name: 'phone'
                     }
                 ]
             });

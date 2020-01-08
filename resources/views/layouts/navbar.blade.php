@@ -6,12 +6,16 @@
                 <a class="nav-link" href="{{route('view')}}">Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{route('column-searching')}}">Browse Experts</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{route('create')}}">Add New</a>
             </li>
         </ul>
         <form class="form-inline">
             <button class="btn btn-outline-light" href="{{route('register')}}" type="button">Register</button>
         </form>
+        <br>
         <form class="form-inline">
             <button class="btn btn-outline-light" href="{{route('login')}}" type="button">Login</button>
         </form>

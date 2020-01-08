@@ -15,13 +15,13 @@ class ColumnSearchingController extends Controller
             if($request->category)
             {
                 $data = DB::table('experts')
-                    ->join('category', 'category.id', '=', 'experts.company_type')
+                    ->join('category', 'category.category_id', '=', 'experts.company_type')
                     ->select('experts.company_name', 'category.category_name', 'experts.first_name', 'experts.last_name', 'experts.email', 'experts.phone')
                     ->where('experts.company_type', $request->category);
             } else
             {
                 $data = DB::table('experts')
-                    ->join('category', 'category.id', '=', 'experts.company_type')
+                    ->join('category', 'category.category_id', '=', 'experts.company_type')
                     ->select('experts.company_name', 'category.category_name', 'experts.first_name', 'experts.last_name', 'experts.email', 'experts.phone');
             }
             return datatables()->of($data)->make(true);

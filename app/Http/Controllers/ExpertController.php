@@ -87,16 +87,16 @@ class ExpertController extends Controller
         $this->middleware('auth');
     }
 
-    public function details()
-    {
-        //View more of selected user ToDo: Add reviews and ratings. Setup like the above
-
-    }
-
     public function view()
     {
         //Create view to add new user
         return view('view');
+    }
+
+    public function columnSearching()
+    {
+        //Browse view
+        return view('column_searching');
     }
 
 }

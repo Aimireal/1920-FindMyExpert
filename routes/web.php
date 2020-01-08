@@ -28,4 +28,5 @@ Route::get('view', 'ExpertController@view')->name('view');
 Auth::routes(['verify' => true]);
 Route::get('/home', 'ExpertController@index')->name('home');
 
+Route::get('columnSearching', 'ExpertController@columnSearching')->name('column-searching');
 Route::resource('column-searching', 'ColumnSearchingController');
