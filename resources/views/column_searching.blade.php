@@ -38,6 +38,8 @@
                     <th>Delete</th>
                 </tr>
                 </thead>
+                <tbody>
+                </tbody>
             </table>
         </div>
     </div>
@@ -77,18 +79,22 @@
                             data: 'phone', name: 'phone'
                         },
                         {
-                            data: 'edit', name: 'edit',
-
-                            //return href="{{route('edit', $expert->id)}}"
+                            data: 'editBtn', name: 'editBtn', defaultContent: '<button>Edit</button>'
                         },
                         {
-                            defaultContent: '<button>Delete</button>'
+                            data: 'deleteBtn', name: 'deleteBtn', defaultContent: '<button>Delete</button>'
                         }
                     ]
                 });
             }
 
-
+            /*
+                EditButton Idea
+                DataTable selected row value
+                Get the ID
+                $expert: = Expert::find(id)
+                Route to Edit View
+             */
 
             $('#category_filter').change(function(){
                 var category_id = $('#category_filter').val();

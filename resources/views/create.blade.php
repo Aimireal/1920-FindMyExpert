@@ -14,7 +14,7 @@
 
        <div class="panel panel-default">
            <div class="panel-heading">
-               <h3 class="panel-title">Add new Expert <small class="text-muted"> Please fill out as much as you can</small></h3>
+               <h3 class="panel-title">Add new Expert</h3>
            </div>
            <div class="panel-body">
                <form class="form-horizontal" action="{{route('store')}}" method="POST">
@@ -22,10 +22,15 @@
                    <fieldset>
 
                        <div class="form-group">
-                           <label for="companyType" class="col-md-2 control-label">Business Type</label>
+                           <label for="category_filter" class="col-md-2 control-label">Business Type</label>
 
                            <div class="col-md-10">
-                               <input type="text" class="form-control" name="companyType" placeholder="...">
+                               <select name="companyType" id="companyType" class="form-control">
+                                   <option value="">Select Business Type</option>
+                                   @foreach($category as $row)
+                                       <option value="{{$row->category_id}}">{{$row->category_name}}</option>
+                                   @endforeach
+                               </select>
                            </div>
                        </div>
 

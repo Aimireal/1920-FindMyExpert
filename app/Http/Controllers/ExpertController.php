@@ -18,7 +18,10 @@ class ExpertController extends Controller
     public function create()
     {
         //Create view to add new user
-        return view('create');
+        $category = DB::table('category')
+            ->select("*")
+            ->get();
+        return view('create', compact('category'));
     }
 
     public function store(Request $request)
@@ -97,10 +100,11 @@ class ExpertController extends Controller
     public function columnSearching()
     {
         //Browse view
+        $experts = Expert::all();
         $category = DB::table('category')
             ->select("*")
             ->get();
-        return view('column_searching', compact('category'));
+        return view('column_searching')->with(compact('category'))->with(compact('experts'));
     }
 
 }

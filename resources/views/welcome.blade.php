@@ -53,6 +53,7 @@
                             }" class="btn btn-raised btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                         </td>
                     </tr>
+                </tbody>
             @endforeach
         </table>
         {{$experts->links()}}
