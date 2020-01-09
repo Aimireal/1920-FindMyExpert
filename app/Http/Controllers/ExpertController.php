@@ -10,7 +10,7 @@ class ExpertController extends Controller
 {
     public function index()
     {
-        //Display the experts
+        //Display the homepage
         $experts = Expert::paginate(10);
         return view('welcome', compact('experts'));
     }
@@ -42,7 +42,7 @@ class ExpertController extends Controller
         $expert->email = $request->email;
         $expert->phone = $request->phone;
         $expert->save();
-        return redirect(route('home'))->with('successMsg', 'Expert Successfully Added');
+        return redirect(route('column-searching'))->with('successMsg', 'Expert Successfully Added');
     }
 
     public function edit($id)
@@ -73,14 +73,14 @@ class ExpertController extends Controller
         $expert->email = $request->email;
         $expert->phone = $request->phone;
         $expert->save();
-        return redirect(route('home'))->with('successMsg', 'Expert Updated');
+        return redirect(route('column-searching'))->with('successMsg', 'Expert Updated');
     }
 
     public function delete($id)
     {
         //Delete an entry from the DB
         Expert::find($id)->delete();
-        return redirect(route('home'))->with('successMsg', 'Expert Removed');
+        return redirect(route('column-searching'))->with('successMsg', 'Expert Removed');
     }
 
     public function __construct()

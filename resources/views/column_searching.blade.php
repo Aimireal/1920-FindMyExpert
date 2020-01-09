@@ -17,9 +17,10 @@
     <div class="container">
         <br />
         <div class="table-responsive">
-            <table class="table table-bordered table-striped" id="expert_table">
+            <table class="table table-bordered table-striped" id="expert_table" style="width:100%;">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Business Name</th>
                     <th>
                         <select name="category_filter" id="category_filter" class="form-control">
@@ -33,6 +34,8 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
             </table>
@@ -53,10 +56,13 @@
                     },
                     columns:[
                         {
+                            data: 'id', name: 'id'
+                        },
+                        {
                             data: 'company_name', name: 'company_name'
                         },
                         {
-                            data: 'category_name', name: 'category_name', orderable: false
+                            data: 'category_name', name: 'category_name', orderable: false, searchable: false, case_insensitive: true
                         },
                         {
                             data: 'first_name', name: 'first_name'
@@ -69,10 +75,21 @@
                         },
                         {
                             data: 'phone', name: 'phone'
+                        },
+                        {
+                            data: 'edit', name: 'edit',
+
+                            //return href="{{route('edit', $expert->id)}}"
+                        },
+                        {
+                            defaultContent: '<button>Delete</button>'
                         }
                     ]
                 });
             }
+
+
+
             $('#category_filter').change(function(){
                 var category_id = $('#category_filter').val();
                 $('#expert_table').DataTable().destroy();
