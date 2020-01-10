@@ -51,8 +51,12 @@ class ExpertController extends Controller
     public function edit($id)
     {
         //Edit the entry from the main page on entry ID
+        $category = DB::table('category')
+            ->select("*")
+            ->get();
+
         $expert = Expert::find($id);
-        return view('edit',compact('expert'));
+        return view('edit',compact('expert'))->with('category', $category);
     }
 
     public function update(Request $request, $id)

@@ -22,18 +22,23 @@
                     <fieldset>
 
                         <div class="form-group">
-                            <label for="companyName" class="col-md-2 control-label">Business Name</label>
+                            <label for="category_filter" class="col-md-2 control-label">Business Type</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->company_name}}"name="companyName" placeholder="Company Name">
+                                <select name="companyType" id="companyType" class="form-control">
+                                    <option value="">Select Business Type</option>
+                                    @foreach($category as $row)
+                                        <option value="{{$row->category_id}}"{{($expert->company_type == $row->category_id) ? ' selected': ''}}>{{$row->category_name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="companyType" class="col-md-2 control-label">Business Type</label>
+                            <label for="companyName" class="col-md-2 control-label">Business Name</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->company_type}}"name="companyType" placeholder="Company Type">
+                                <input type="text" class="form-control" value="{{$expert->company_name}}"name="companyName" placeholder="Company Name">
                             </div>
                         </div>
 
