@@ -30,7 +30,7 @@ class ColumnSearchingController extends Controller
                     return "<a class='btn btn-xs' href='/edit/$data->id'><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a>";
                 })
                 ->addColumn('deleteColumn', function($data){
-                    return '<a href="'.route('delete', $data->id).'"<i class="fa fa-trash-o" aria-hidden="true\"></i</a>';
+                    return '<a class=\'btn btn-xs\' href="'.route('delete', $data->id).'"><i class="fa fa-trash-o" aria-hidden="true\"></i</a>';
                 })
                 ->rawColumns(['editColumn', 'deleteColumn'])
                 ->make(true);

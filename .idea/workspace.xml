@@ -4,7 +4,6 @@
     <list default="true" id="d0fee4fb-9f62-4025-a410-3a9db7047a7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ColumnSearchingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ColumnSearchingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/column_searching.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/column_searching.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ColumnSearchingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+            <state relative-caret-position="475">
+              <caret line="32" column="140" lean-forward="true" selection-start-line="32" selection-start-column="140" selection-end-line="32" selection-end-column="140" />
               <folding>
                 <element signature="e#40#74#0#PHP" expanded="true" />
               </folding>
@@ -352,12 +351,12 @@
       <workItem from="1578245077132" duration="78465000" />
       <workItem from="1578520652037" duration="13394000" />
       <workItem from="1578594982919" duration="23729000" />
-      <workItem from="1578670801102" duration="9196000" />
+      <workItem from="1578670801102" duration="9439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124784000" />
+    <option name="totallyTimeSpent" value="125027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,7 +386,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.329849" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.21235102" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.21235102" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -621,8 +620,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ColumnSearchingController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+        <state relative-caret-position="475">
+          <caret line="32" column="140" lean-forward="true" selection-start-line="32" selection-start-column="140" selection-end-line="32" selection-end-column="140" />
           <folding>
             <element signature="e#40#74#0#PHP" expanded="true" />
           </folding>
