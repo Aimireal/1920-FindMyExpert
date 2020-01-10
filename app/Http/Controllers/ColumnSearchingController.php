@@ -27,9 +27,12 @@ class ColumnSearchingController extends Controller
             }
             return datatables()->of($data)
                 ->addColumn('editColumn', function($data){
-                    return "<a class='btn btn-xs btn-success' href='/edit/$data->id'>Edit</a>";
+                    return "<a class='btn btn-xs' href='/edit/$data->id'><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a>";
                 })
-                ->rawColumns(['editColumn'])
+                ->addColumn('deleteColumn', function($data){
+                    return '<a href="'.route('delete', $data->id).'"<i class="fa fa-trash-o" aria-hidden="true\"></i</a>';
+                })
+                ->rawColumns(['editColumn', 'deleteColumn'])
                 ->make(true);
         }
 

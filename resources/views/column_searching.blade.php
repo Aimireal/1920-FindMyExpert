@@ -82,17 +82,11 @@
                             data: 'editColumn', name: 'editColumn', id: 'editColumn', orderable: false, searchable: false
                         },
                         {
-                            data: 'deleteBtn', name: 'deleteBtn', defaultContent: '<button class="deleteBtn">Delete</button>'
+                            data: 'deleteColumn', name: 'deleteColumn', id: 'deleteColumn', orderable: false, searchable: false
                         }
                     ]
                 });
             }
-
-            $('#expert_table tbody').on('click', 'button.deleteBtn', function(){
-                var tr = $(this).closest("tr");
-                var data = $("#expert_table").DataTable().row(tr).data();
-                alert(data.id);
-            });
 
             $('#category_filter').change(function(){
                 var category_id = $('#category_filter').val();
