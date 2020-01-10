@@ -30,7 +30,7 @@ class ColumnSearchingController extends Controller
                     return "<a class='btn btn-xs' href='/edit/$data->id'><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a>";
                 })
                 ->addColumn('deleteColumn', function($data){
-                    return '<a class=\'btn btn-xs\' href="'.route('delete', $data->id).'"><i class="fa fa-trash-o" aria-hidden="true\"></i</a>';
+                    return '<a class=\'btn btn-xs\' href="'.route('RemoveDB', $data->id).'"><i class="fa fa-trash-o" aria-hidden="true\"></i></a>';
                 })
                 ->rawColumns(['editColumn', 'deleteColumn'])
                 ->make(true);
@@ -41,5 +41,11 @@ class ColumnSearchingController extends Controller
             ->select("*")
             ->get();
         return view('column_searching', compact('category'))->with('experts', $experts);
+    }
+
+    public function RemoveDB($id)
+    {
+        DB::table('experts')->where('id', '=', $id)->delete();
+        return redirect(route('column-searching'))->with('successMsg', 'Expert Removed');
     }
 }

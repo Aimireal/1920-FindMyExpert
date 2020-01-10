@@ -11,8 +11,7 @@ class ExpertController extends Controller
     public function index()
     {
         //Display the homepage
-        $experts = Expert::paginate(10);
-        return view('welcome', compact('experts'));
+        return view('welcome');
     }
 
     public function create()
@@ -83,22 +82,9 @@ class ExpertController extends Controller
         return redirect(route('column-searching'))->with('successMsg', 'Expert Updated');
     }
 
-    public function delete($id)
-    {
-        //Delete an entry from the DB
-        Expert::find($id)->delete();
-        return redirect(route('column-searching'))->with('successMsg', 'Expert Removed');
-    }
-
     public function __construct()
     {
         $this->middleware('auth');
-    }
-
-    public function view()
-    {
-        //Create view to add new user
-        return view('view');
     }
 
     public function columnSearching()
