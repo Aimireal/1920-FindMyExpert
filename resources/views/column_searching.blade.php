@@ -79,7 +79,7 @@
                             data: 'phone', name: 'phone'
                         },
                         {
-                            data: 'editBtn', name: 'editBtn', defaultContent: '<button class="editBtn">Edit</button>'
+                            data: 'editColumn', name: 'editColumn', id: 'editColumn', orderable: false, searchable: false
                         },
                         {
                             data: 'deleteBtn', name: 'deleteBtn', defaultContent: '<button class="deleteBtn">Delete</button>'
@@ -87,14 +87,6 @@
                     ]
                 });
             }
-
-            $('#expert_table tbody').on('click', 'button.editBtn', function(){
-                var tr = $(this).closest("tr");
-                var data = $("#expert_table").DataTable().row(tr).data();
-                alert(data.id);
-                return '<a href={{url('edit/')}}'+'/'+data.id+'>Edit</a>';
-            });
-
 
             $('#expert_table tbody').on('click', 'button.deleteBtn', function(){
                 var tr = $(this).closest("tr");
