@@ -88,16 +88,6 @@
                 });
             }
 
-            $('#expert_table tbody').on('click', '.delete', function(){
-                if(confirm("Do you want to delete this entry?"))
-                {
-
-                }else
-                {
-                    return false;
-                }
-            });
-
             $('#category_filter').change(function(){
                 var category_id = $('#category_filter').val();
                 $('#expert_table').DataTable().destroy();
