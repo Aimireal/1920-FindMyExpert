@@ -9,6 +9,9 @@
                 <a class="nav-link" href="{{route('column-searching')}}">Browse Experts</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{route('column-searching')}}">Browse Map</a>
+            </li>
+            <li class="nav-item">
                 @guest
                     <a class="nav-link disabled" href="{{route('home')}}">Add New</a>
                 @else
