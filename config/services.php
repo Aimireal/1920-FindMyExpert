@@ -2,18 +2,6 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Third Party Services
-    |--------------------------------------------------------------------------
-    |
-    | This file is for storing the credentials for third party services such
-    | as Mailgun, Postmark, AWS and more. This file provides the de facto
-    | location for this type of information, allowing packages to have
-    | a conventional file to locate the various service credentials.
-    |
-    */
-
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
@@ -34,6 +22,12 @@ return [
         'client_id' => env('TWITTER_CLIENT_ID'),  // Your Twitter Client ID
         'client_secret' => env('TWITTER_CLIENT_SECRET'), // Your Twitter Client Secret
         'redirect' => env('TWITTER_CALLBACK_URL'),
+    ],
+
+    'google' => [
+        'maps' => [
+            'api-key' => env('GOOGLE_MAPS_API_KEY'),
+        ],
     ],
 
 ];

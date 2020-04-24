@@ -68,14 +68,15 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
-                    <div class="form-group">
-                        <div class="col-md-10 col-md-offset-4">
-                            <a href="{{ url('/login/google') }}" class="btn btn-google" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
-                            <a href="{{ url('/login/github') }}" class="btn btn-github" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
-                            <a href="{{ url('/login/twitter') }}" class="btn btn-twitter" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-4">
+                                <a href="{{ url('/login/google') }}" class="btn btn-google" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+                                <a href="{{ url('/login/github') }}" class="btn btn-github" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
+                                <a href="{{ url('/login/twitter') }}" class="btn btn-twitter" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
