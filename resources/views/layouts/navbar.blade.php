@@ -9,7 +9,7 @@
                 <a class="nav-link" href="{{route('column-searching')}}">Browse Experts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('column-searching')}}">Browse Map</a>
+                <a class="nav-link" href="{{route('maps-View')}}">Browse Map</a>
             </li>
             <li class="nav-item">
                 @guest

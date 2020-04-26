@@ -97,4 +97,13 @@ class ExpertController extends Controller
         return view('column_searching')->with(compact('category'))->with(compact('experts'));
     }
 
+    public function mapsView()
+    {
+        //Maps view
+        $latLong = DB::table('experts')
+            ->select("latitude", "longitude")
+            ->get();
+        return view('maps')->with(compact('latLong'));
+    }
+
 }

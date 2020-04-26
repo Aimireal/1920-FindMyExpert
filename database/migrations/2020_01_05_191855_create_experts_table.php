@@ -21,6 +21,9 @@ class CreateExpertsTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->string('phone');
+            $table->string('address');
+            $table->decimal('latitude');
+            $table->decimal('longitude');
             $table->timestamps();
         });
     }
