@@ -17,7 +17,7 @@
     <div class="container">
         <br />
         <div class="table-responsive">
-            <table class="table table-bordered table-striped" id="expert_table" style="width:100%;">
+            <table class="table table-bordered table-striped" id="expert_table" style="width:100%">
                 <thead>
                 <tr>
                     <th>ID</th>

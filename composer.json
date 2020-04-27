@@ -15,7 +15,8 @@
         "laravel/socialite": "^4.3",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
-        "yajra/laravel-datatables-oracle": "^9.8"
+        "yajra/laravel-datatables-oracle": "^9.8",
+        "ext-json:": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

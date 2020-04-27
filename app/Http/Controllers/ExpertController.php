@@ -100,10 +100,10 @@ class ExpertController extends Controller
     public function mapsView()
     {
         //Maps view
-        $latLong = DB::table('experts')
-            ->select("latitude", "longitude")
+        $experts = DB::table('experts')
+            ->select("*")
             ->get();
-        return view('maps')->with(compact('latLong'));
+        return view('maps')->with('experts', $experts);
     }
 
 }

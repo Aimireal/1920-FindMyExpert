@@ -45,7 +45,7 @@
                        </div>
 
                        <div class="form-group">
-                           <label for="location" class="col-md-2 control-label">Location:</label>
+                           <label for="location" class="col-md-2 control-label">Location</label>
 
                            <div class="col-md-10">
                                <input type="text" class="form-control" name="location"
