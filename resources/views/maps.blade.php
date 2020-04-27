@@ -9,23 +9,36 @@
     <script>
         var locations = [
             @foreach($experts as $expert)
-                [ {{$expert->latitude }}, {{ $expert->longitude }} ],
+            {lat:'{{$expert->latitude}}', long:'{{$expert->longitude}}',
+                name:'{{$expert->company_name}}', address:'{{$expert->address}}'},
             @endforeach
         ];
 
         var infowindow = new google.maps.InfoWindow();
-        var marker, i;
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 9,
-            center: new google.maps.LatLng(52.3555, 1.1743),
+            zoom: 7,
+            center: new google.maps.LatLng(53.8108, -1.7626),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
         for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-                map: map
-            });
+            createMarker(locations[i])
         }
+
+        function createMarker(data)
+        {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(data.lat, data.long),
+                map: map,
+                title: data.name
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(data.address);
+                infowindow.open(map, marker);
+            });
+        };
+
+
     </script>
 @endsection
