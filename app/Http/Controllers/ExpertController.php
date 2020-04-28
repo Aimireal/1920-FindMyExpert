@@ -118,4 +118,15 @@ class ExpertController extends Controller
         return view('maps')->with('experts', $experts);
     }
 
+    public function view($id)
+    {
+        //Edit the entry from the main page on entry ID
+        $category = DB::table('category')
+            ->select("*")
+            ->get();
+
+        $expert = Expert::find($id);
+        return view('view',compact('expert'))->with('category', $category);
+    }
+
 }

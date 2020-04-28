@@ -7,6 +7,8 @@ Route::get('details', 'ExpertController@details')->name('details');
 Route::get('create', 'ExpertController@create')->name('create');
 Route::post('create', 'ExpertController@store')->name('store');
 
+Route::get('view/{id}', 'ExpertController@view')->name('view');
+
 Route::get('edit/{id}', 'ExpertController@edit')->name('edit');
 Route::post('update/{id}', 'ExpertController@update')->name('update');
 

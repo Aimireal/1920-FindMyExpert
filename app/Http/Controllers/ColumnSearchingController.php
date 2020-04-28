@@ -26,13 +26,16 @@ class ColumnSearchingController extends Controller
                     ->select('experts.id', 'experts.company_name', 'category.category_name', 'experts.first_name', 'experts.last_name', 'experts.email', 'experts.phone');
             }
             return datatables()->of($data)
+                ->addColumn('viewColumn', function($data){
+                    return "<a class='btn btn-xs' href='/view/$data->id'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i></a>";
+                })
                 ->addColumn('editColumn', function($data){
                     return "<a class='btn btn-xs' href='/edit/$data->id'><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a>";
                 })
                 ->addColumn('deleteColumn', function($data){
                     return '<a class=\'btn btn-xs\' href="'.route('RemoveDB', $data->id).'"><i class="fa fa-trash-o" aria-hidden="true\"></i></a>';
                 })
-                ->rawColumns(['editColumn', 'deleteColumn'])
+                ->rawColumns(['viewColumn', 'editColumn', 'deleteColumn'])
                 ->make(true);
         }
 

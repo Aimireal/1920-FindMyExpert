@@ -34,6 +34,7 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>View</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -77,6 +78,9 @@
                         },
                         {
                             data: 'phone', name: 'phone'
+                        },
+                        {
+                            data: 'viewColumn', name: 'viewColumn', id: 'viewColumn', orderable: false, searchable: false
                         },
                         {
                             data: 'editColumn', name: 'editColumn', id: 'editColumn', orderable: false, searchable: false

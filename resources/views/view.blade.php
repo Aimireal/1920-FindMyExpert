@@ -14,7 +14,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Edit Expert</h3>
+                <h3 class="panel-title">View Expert</h3>
             </div>
             <div class="panel-body">
                 <form class="form-horizontal" action="{{route('update', $expert->id)}}" method="POST">
@@ -25,7 +25,7 @@
                             <label for="category_filter" class="col-md-2 control-label">Business Type</label>
 
                             <div class="col-md-10">
-                                <select name="companyType" id="companyType" class="form-control">
+                                <select name="companyType" id="companyType" class="form-control" readonly="true">
                                     <option value="">Select Business Type</option>
                                     @foreach($category as $row)
                                         <option value="{{$row->category_id}}"{{($expert->company_type == $row->category_id) ? ' selected': ''}}>{{$row->category_name}}</option>
@@ -38,7 +38,7 @@
                             <label for="companyName" class="col-md-2 control-label">Business Name</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->company_name}}"name="companyName" placeholder="Company Name">
+                                <input type="text" class="form-control" value="{{$expert->company_name}}"name="companyName" placeholder="Company Name" readonly>
                             </div>
                         </div>
 
@@ -47,10 +47,7 @@
 
                             <div class="col-md-10">
                                 <input type="text" class="form-control" name="location"
-                                       id="search_input" placeholder="Location" />
-
-                                <input type="hidden" id="loc_lat" />
-                                <input type="hidden" id="loc_long" />
+                                       id="search_input" placeholder="Location" readonly/>
                             </div>
                         </div>
 
@@ -58,7 +55,7 @@
                             <label for="firstName" class="col-md-2 control-label">First Name</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->first_name}}" name="firstName" placeholder="First Name">
+                                <input type="text" class="form-control" value="{{$expert->first_name}}" name="firstName" placeholder="First Name" readonly>
                             </div>
                         </div>
 
@@ -66,7 +63,7 @@
                             <label for="lastName" class="col-md-2 control-label">Last Name</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->last_name}}"name="lastName" placeholder="Last Name">
+                                <input type="text" class="form-control" value="{{$expert->last_name}}"name="lastName" placeholder="Last Name" readonly>
                             </div>
                         </div>
 
@@ -74,7 +71,7 @@
                             <label for="inputEmail" class="col-md-2 control-label">Contact Email</label>
 
                             <div class="col-md-10">
-                                <input type="email" class="form-control" value="{{$expert->email}}"name="email" id="inputEmail" placeholder="Email">
+                                <input type="email" class="form-control" value="{{$expert->email}}"name="email" id="inputEmail" placeholder="Email" readonly>
                             </div>
                         </div>
 
@@ -82,40 +79,28 @@
                             <label for="phone" class="col-md-2 control-label">Phone Number</label>
 
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$expert->phone}}"name="phone" placeholder="Phone Number">
+                                <input type="text" class="form-control" value="{{$expert->phone}}"name="phone" placeholder="Phone Number" readonly>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-10 col-md-offset-2">
-                                <button type="button" class="btn btn-default">Cancel</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                            <label for="rating" class="col-md-2 control-label">Expert Rating</label>
+
+                            <div class="col-md-10">
+
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="review" class="col-md-2 control-label">Expert Reviews</label>
+
+                            <div class="col-md-10">
+
+                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </div>
         </div>
-        <script>
-            var autocomplete;
-            var searchInput = 'search_input';
-            $(document).ready(function () {
-
-                autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-                    types: ['address'],
-                    componentRestrictions: {country: 'uk'}
-                });
-
-                google.maps.event.addListener(autocomplete, 'place_changed', function () {
-                    var place = autocomplete.getPlace();
-                    var lat = place.geometry.location.lat();
-                    var lng = place.geometry.location.lng();
-
-                    document.getElementById('latitude').value = lat;
-                    document.getElementById('longitude').value = lng;
-                });
-            });
-        </script>
     </div>
 @endsection
