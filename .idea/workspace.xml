@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0fee4fb-9f62-4025-a410-3a9db7047a7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/maps.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/maps.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,19 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExpertController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+            <state relative-caret-position="374">
+              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
               <folding>
                 <element signature="e#40#55#0#PHP" expanded="true" />
               </folding>
@@ -39,22 +32,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/maps.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-              <folding>
-                <element signature="e#77#114#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/column_searching.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state relative-caret-position="17">
+              <caret line="1" column="144" selection-start-line="1" selection-start-column="144" selection-end-line="1" selection-end-column="144" />
             </state>
           </provider>
         </entry>
@@ -70,13 +51,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HomeController</find>
-      <find>customSearch</find>
-      <find>customsearch</find>
-      <find>route('view</find>
-      <find>custom</find>
-      <find>ExpertController</find>
-      <find>CustomSearchController</find>
       <find>index</find>
       <find>expert.</find>
       <find>experts.category_name</find>
@@ -89,7 +63,6 @@
       <find>pa</find>
       <find>store</find>
       <find>category_filter</find>
-      <find>companyType</find>
       <find>edit</find>
       <find>msg</find>
       <find>maps</find>
@@ -100,6 +73,14 @@
       <find>$ex</find>
       <find>locations</find>
       <find>zoom</find>
+      <find>look</find>
+      <find>searchinput</find>
+      <find>create</find>
+      <find>latitude</find>
+      <find>hidde</find>
+      <find>companyType</find>
+      <find>company_Type</find>
+      <find>phone</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\user1\Documents\Advanced Web Programming\FindMyExpert\resources\views</dir>
@@ -158,11 +139,11 @@
         <option value="$PROJECT_DIR$/database/migrations/2020_01_05_191855_create_experts_table.php" />
         <option value="$PROJECT_DIR$/public/css/maps.css" />
         <option value="$PROJECT_DIR$/resources/views/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/column_searching.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" />
         <option value="$PROJECT_DIR$/resources/views/maps.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExpertController.php" />
+        <option value="$PROJECT_DIR$/resources/views/create.blade.php" />
       </list>
     </option>
   </component>
@@ -414,12 +395,12 @@
       <workItem from="1584360087949" duration="963000" />
       <workItem from="1587573400218" duration="31401000" />
       <workItem from="1587930418940" duration="2371000" />
-      <workItem from="1587992829116" duration="12250000" />
+      <workItem from="1587992829116" duration="21193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212535000" />
+    <option name="totallyTimeSpent" value="221478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,7 +415,7 @@
     <frame x="-8" y="-8" width="1936" height="994" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21162046" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -449,7 +430,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50107527" side_tool="true" weight="0.27272728" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49892473" visible="true" weight="0.16260162" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49892473" visible="true" weight="0.16260162" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -781,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="122" column="31" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_02_17_create_addresses_table">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -808,16 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExpertController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="105" column="34" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
-          <folding>
-            <element signature="e#40#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/column_searching.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -827,11 +791,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/maps.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="289">
+          <caret line="17" column="65" lean-forward="true" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
           <folding>
             <element signature="e#77#114#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExpertController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding>
+            <element signature="e#40#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="144" selection-start-line="1" selection-start-column="144" selection-end-line="1" selection-end-column="144" />
         </state>
       </provider>
     </entry>

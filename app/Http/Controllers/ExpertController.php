@@ -33,7 +33,10 @@ class ExpertController extends Controller
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
-                'phone' => 'required'
+                'phone' => 'required',
+                'address' => 'required',
+                'latitude' => 'required',
+                'longitude' => 'required'
             ]);
 
         $expert = new Expert;
@@ -43,6 +46,9 @@ class ExpertController extends Controller
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;
         $expert->phone = $request->phone;
+        $expert->address = $request->address;
+        $expert->latitude = $request->latitude;
+        $expert->longitude = $request->longitude;
         $expert->save();
         return redirect(route('column-searching'))->with('successMsg', 'Expert Successfully Added');
     }
@@ -68,7 +74,10 @@ class ExpertController extends Controller
                 'firstName' => 'required',
                 'lastName' => 'required',
                 'email' => 'required',
-                'phone' => 'required'
+                'phone' => 'required',
+                'address' => 'required',
+                'latitude' => 'required',
+                'longitude' => 'required'
             ]);
 
         $expert = Expert::find($id);
@@ -78,6 +87,9 @@ class ExpertController extends Controller
         $expert->last_name = $request->lastName;
         $expert->email = $request->email;
         $expert->phone = $request->phone;
+        $expert->address = $request->address;
+        $expert->latitude = $request->latitude;
+        $expert->longitude = $request->longitude;
         $expert->save();
         return redirect(route('column-searching'))->with('successMsg', 'Expert Updated');
     }

@@ -34,11 +34,9 @@
             });
 
             google.maps.event.addListener(marker, 'click', function() {
-                infowindow.setContent(data.address);
+                infowindow.setContent(data.name + " - Address: " + data.address);
                 infowindow.open(map, marker);
             });
-        };
-
-
+        }
     </script>
 @endsection
