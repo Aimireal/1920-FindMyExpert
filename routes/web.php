@@ -24,7 +24,8 @@ Route::resource('column-searching', 'ColumnSearchingController');
 Route::get('mapsView', 'ExpertController@mapsView')->name('maps-View');
 
 Auth::routes();
-Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
-Route::get('/callback/{provider}', 'SocialAuthController@callback');
-
-Auth::routes();
+Route::group(
+    ['prefix' => 'oauth', 'as' => 'oauth.', 'middleware' => ['guest', 'throttle']], function () {
+    Route::get('/{provider}', 'Auth\SocialiteController@redirectToProvider')->name('login')->where('provider', 'google|github|twitter');
+    Route::get('/{provider}/callback', 'Auth\SocialiteController@handleProviderCallback')->where('provider', 'google|github|twitter');
+});

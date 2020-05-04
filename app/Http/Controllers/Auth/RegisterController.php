@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Socialite\Facades\Socialite;
+use App\SocialiteAccount;
 
 class RegisterController extends Controller
 {
@@ -37,4 +39,44 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function redirectToProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+
+    public function handleProviderCallback($provider)
+    {
+        try
+        {
+            $socialUser = Socialite::driver($provider)->user();
+        }
+        catch(\Exception $e)
+        {
+            return redirect('/');
+        }
+        //check if we have logged provider
+        $socialProvider = SocialiteAccount::where('provider_id',$socialUser->getId())->first();
+        if(!$socialProvider)
+        {
+            //create a new user and provider
+            $user = User::firstOrCreate(
+                ['email' => $socialUser->getEmail()],
+                ['name' => $socialUser->getName()]
+            );
+
+            $user->socialProviders()->create(
+                ['provider_id' => $socialUser->getId(), 'provider' => $provider]
+            );
+
+        }
+        else
+            $user = $socialProvider->user;
+
+        auth()->login($user);
+
+        return redirect('/home');
+
+    }
+
 }

@@ -1,9 +1,10 @@
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+
 class SocialiteAccount extends Model
 {
-    protected $fillable = ['user_id', 'provider_user_id', 'provider'];
+    protected $fillable = ['provider_id', 'provider'];
 
     public function user()
     {

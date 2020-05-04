@@ -57,13 +57,25 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a href="{{url('/redirect/twitter')}}" class="btn btn-primary">Login with Twitter</a>
-
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-4">
+                                    <a href="{{route('oauth.login','google')}}" class="btn btn-outline-danger">
+                                        Log in with Google
+                                    </a>
+                                    <a href="{{route('oauth.login','github')}}" class="btn btn-outline-secondary">
+                                        Log in with Github
+                                    </a>
+                                    <a href="{{route('oauth.login','twitter')}}" class="btn btn-outline-secondary">
+                                        Log in with Twitter
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </form>

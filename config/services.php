@@ -25,9 +25,14 @@ return [
     ],
 
     'google' => [
-        'maps' => [
-            'api-key' => env('GOOGLE_MAPS_API_KEY'),
-        ],
+        'client_id' => env('GOOGLE_OAUTH_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_OAUTH_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_OAUTH_REDIRECT'),
     ],
 
+    'github' => [
+        'client_id' => env('GITHUB_OAUTH_CLIENT_ID'),
+        'client_secret' => env('GITHUB_OAUTH_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_OAUTH_REDIRECT'),
+    ],
 ];

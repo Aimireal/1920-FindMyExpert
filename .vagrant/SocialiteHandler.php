@@ -1,7 +1,7 @@
 <?php
 namespace App;
 use Laravel\Socialite\Contracts\User as ProviderUser;
-use App\SocialiteAccount;
+use app\SocialiteAccount;
 class SocialiteHandler
 {
     public function createOrGetUser(ProviderUser $providerUser, $provider)

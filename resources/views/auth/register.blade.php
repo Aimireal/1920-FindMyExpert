@@ -70,10 +70,16 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-10 col-md-offset-4">
-                                <a href="{{ url('/login/google') }}" class="btn btn-google" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
-                                <a href="{{ url('/login/github') }}" class="btn btn-github" class="btn btn-github"><i class="fa fa-github"></i> Github</a>
-                                <a href="{{ url('/login/twitter') }}" class="btn btn-twitter" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                            <div class="col-md-6 col-md-offset-4">
+                                <a href="{{route('oauth.login','google')}}" class="btn btn-outline-danger">
+                                    Log in with Google
+                                </a>
+                                <a href="{{route('oauth.login','github')}}" class="btn btn-outline-secondary">
+                                    Log in with Github
+                                </a>
+                                <a href="{{route('oauth.login','twitter')}}" class="btn btn-outline-secondary">
+                                    Log in with Twitter
+                                </a>
                             </div>
                         </div>
                     </form>

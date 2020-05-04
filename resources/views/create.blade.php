@@ -51,10 +51,9 @@
                                <input type="text" class="form-control" name="address"
                                       id="search_input" placeholder="Address" />
 
-                               <! – –> ToDo: Change input type = "hidden"
-                               <input type="text" class="form-control" name="latitude"
+                               <input type="hidden" class="form-control" name="latitude"
                                       id="latitude" placeholder="Latitude"/>
-                               <input type="text" class="form-control" name="longitude"
+                               <input type="hidden" class="form-control" name="longitude"
                                       id="longitude" placeholder="Longitude"/>
                            </div>
                        </div>
@@ -93,7 +92,7 @@
 
                        <div class="form-group">
                            <div class="col-md-10 col-md-offset-2">
-                               <a href="{{route('home')}}" type="button" class="btn btn-default">Cancel</a>
+                               <button type="button" class="btn btn-default" onclick="window.location='{{ URL::previous() }}'">Cancel</button>
                                <button type="submit" class="btn btn-primary">Submit</button>
                            </div>
                        </div>
