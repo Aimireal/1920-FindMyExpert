@@ -67,7 +67,7 @@
                     <li>Student Number - U1652664</li>
                     <li>University of Huddersfield</li>
                     <li>BSc Computing</li>
-                    <li>January 2020</li>
+                    <li>Final Update: May 4th 2020</li>
                 </ul>
             </ul>
         </div>

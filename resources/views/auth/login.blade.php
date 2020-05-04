@@ -57,6 +57,8 @@
                                     {{ __('Login') }}
                                 </button>
 
+                                <a href="{{url('/redirect/twitter')}}" class="btn btn-primary">Login with Twitter</a>
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}

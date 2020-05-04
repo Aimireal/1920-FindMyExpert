@@ -85,6 +85,23 @@
                             </div>
                         </div>
 
+                        <div>
+                            <div id="wpac-rating"></div>
+                            <script type="text/javascript">
+                                wpac_init = window.wpac_init || [];
+                                wpac_init.push({widget: 'Rating', id: 24993});
+                                (function() {
+                                    if ('WIDGETPACK_LOADED' in window) return;
+                                    WIDGETPACK_LOADED = true;
+                                    var mc = document.createElement('script');
+                                    mc.type = 'text/javascript';
+                                    mc.async = true;
+                                    mc.src = 'https://embed.widgetpack.com/widget.js';
+                                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+                                })();
+                            </script>
+                        </div>
+
                         <div class="form-group">
                             <div id="disqus_thread"></div>
                             <script>
@@ -100,7 +117,6 @@
                                 })();
                             </script>
                             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
                         </div>
                     </fieldset>
                 </form>

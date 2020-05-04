@@ -24,3 +24,7 @@ Route::resource('column-searching', 'ColumnSearchingController');
 Route::get('mapsView', 'ExpertController@mapsView')->name('maps-View');
 
 Auth::routes();
+Route::get('/redirect/{provider}', 'SocialAuthController@redirect');
+Route::get('/callback/{provider}', 'SocialAuthController@callback');
+
+Auth::routes();
